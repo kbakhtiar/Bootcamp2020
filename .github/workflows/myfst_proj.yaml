@@ -19,15 +19,17 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - name: Setup Node
+      
 
     # Runs a single command using the runners shell
     - name: Install NodeJs
-      uses: action/Setup-node@v2-beta
+    - uses: actions/Setup-node@v2-beta
       with:
-        node version: 12
-      -name: Install Surge
+        node-version: '12'
+      - name: Setup Surge
        run: npm install --g surge
-       -name: run surge
+       - name: Execute Deployment with Surge
         run: Surge ./nomi-hassan.surge.sh --token ${(secrets.mySurge_Token)}
         
             
