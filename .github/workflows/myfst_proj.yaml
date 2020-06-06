@@ -26,10 +26,10 @@ jobs:
     - name: Install NodeJS
     - uses: actions/Setup-node@v2-beta
       with:
-        node-version: 12
-      - name: Setup Surge
+        node-version: 12.18.0
+      - name: Install Surge
        run: npm install --global surge
-       - name: Execute Deployment with Surge
-        run: Surge ./nomi-hassan.surge.sh --token ${(secrets.mySurge_Token)}
+       - name: Run Surge
+        run: Surge ./ nomi-hassan.surge.sh --token ${(secrets.mySurge_Token)}
         
             
