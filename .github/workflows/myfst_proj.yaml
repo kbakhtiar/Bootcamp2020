@@ -24,12 +24,12 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Install NodeJS
-    - uses: actions/Setup-node@v2-beta
+    - uses: action/Setup-node@v2-beta
       with:
-        node-version: 12.18.0
+        node-version: 12
       - name: Install Surge
        run: npm install --global surge
        - name: Run Surge
-        run: Surge ./ nomi-hassan.surge.sh --token ${(secrets.mySurge_Token)}
+        run: Surge ./ nomi-hassan.surge.sh --token ${(Secrets.mySurge_Token)}
         
             
