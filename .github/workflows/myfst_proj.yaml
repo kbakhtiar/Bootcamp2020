@@ -24,6 +24,6 @@ jobs:
     - name: Setup Surge
        run: npm install --global Surge
     - name: Run Surge
-        run: Surge ./ nomi-hassan.surge.sh --token ${(Secrets.mySurge_Token)}
+        run: Surge ./ nomi-hassan.surge.sh --token ${{Secrets.mySurge_Token}}
         
             
