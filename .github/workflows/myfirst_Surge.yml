@@ -27,6 +27,6 @@ jobs:
         node-version: 12
       
     - name: Install Surge
-      run:  npm Install --global Surge
+      run:  npm Install -g surge
     - name: Run Surge
-      run:  surge ./ build nomi-hassan.surge.sh --token {{Secrets.MYSURGE_TOKEN}}
+      run:  surge ./ nomi-hassan.surge.sh --token {{Secrets.MYSURGE_TOKEN}}
