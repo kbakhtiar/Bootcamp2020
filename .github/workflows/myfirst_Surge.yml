@@ -25,7 +25,7 @@ jobs:
       uses: actions/Setup-node@v2-beta
       with:
         node-version: 12
-    - name: Install surge
+    - name: Install Surge
       run:  npm install -g surge
-    - name: run surge
-      run:  surge ./build nomi-hassan.surge.sh --token {{Secrets.MYSURGE_TOKEN}}
+    - name: Run Surge
+      run:  surge ./ nomi-hassan.surge.sh --token {{Secrets.MYSURGE_TOKEN}}
